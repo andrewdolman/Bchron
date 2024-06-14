@@ -12,7 +12,6 @@
 #' @seealso \code{\link{BchronCalibrate}}, \code{\link{Bchronology}}, \code{\link{BchronRSL}}, \code{\link{BchronDensity}}, \code{\link{BchronDensityFast}}
 #'
 #' @import ggplot2
-#' @importFrom ggforce geom_ellipse
 #' @importFrom stats predict qnorm sd
 #'
 #' @export
@@ -56,7 +55,7 @@ plot.BchronRSLRun <-
         rslErr = mult * x$RSLsd
       )
       p <- ggplot(data = rslDf, aes(x = Age, y = RSL)) +
-        geom_ellipse(aes(
+        ggforce::geom_ellipse(aes(
           x0 = Age, y0 = RSL,
           a = ageErr, b = rslErr, angle = 0
         ),
