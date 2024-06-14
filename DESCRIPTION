@@ -17,7 +17,6 @@ Imports:
     ggridges,
     magrittr,
     purrr,
-    ggforce,
     dplyr,
     scales,
     stringr,
@@ -46,7 +45,8 @@ Suggests:
     knitr,
     testthat (>= 3.0.0),
     rmarkdown,
-    covr
+    covr,
+    ggforce
 VignetteBuilder: knitr
 NeedsCompilation: yes
 RoxygenNote: 7.2.3

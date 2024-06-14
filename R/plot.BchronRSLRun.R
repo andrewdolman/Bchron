@@ -38,6 +38,13 @@ plot.BchronRSLRun <-
 
     # Plot raw RSL
     if ("RSL" %in% type) {
+      
+      if (!requireNamespace("ggforce", quietly = TRUE)) {
+        stop(
+          "Package \"ggforce\" must be installed to plot RSL estimates.",
+          call. = FALSE
+        )
+      }
 
       # First create a data frame which has elements
       # age_mean, age_sd
